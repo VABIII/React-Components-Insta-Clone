@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const LikeSection = props => {
-    const { likePost, numberOfLikes, post } = props;
+    const { likePost, numberOfLikes } = props;
   const onClick = evt => {
       console.log(evt)
   }
@@ -19,7 +19,7 @@ const LikeSection = props => {
         key='likes-icons-container'
       >
         <div className='like-section-wrapper'>
-          <FontAwesomeIcon icon={faHeart} onClick={() => likePost(post.id)} />
+          <FontAwesomeIcon icon={faHeart} onClick={() => likePost(numberOfLikes)} />
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon on icon={faComment} onClick={onClick} />
